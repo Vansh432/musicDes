@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #02112e;
+    color: #fff;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+:root {
+    --nav_color: #fff;
+    --fontFamily-Albums: 'Rubik', sans-serif;
+}
+
+.musicApp {
+    min-height: 100vh;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-right: 50px;
+
+}
+
+nav .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 25%;
+}
+
+nav .logo .imageLogo {
+    width: 35%;
+    height: 100%;
+    cursor: pointer;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+nav .logo a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #000;
+    font-family: 'Noto Sans Tangsa', sans-serif;
+    color: var(--nav_color);
+    transition: 0.4s;
+    padding: 10px 30px;
+
+}
+
+nav .logo a:hover {
+    background: linear-gradient(90deg, #041b49 20%, rgb(174, 0, 255));
+}
+
+nav .Search_profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.Search_profile .searchBox {
+    position: relative;
+    width: 70%;
+    height: 38px;
+}
+
+.Search_profile .searchBox #search,
+#mic {
+    position: absolute;
+    top: 9px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.searchBox #search {
+    left: 5px;
+}
+
+.searchBox #mic {
+    right: 5px;
+}
+
+.Search_profile .searchBox input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+nav .Search_profile #notifcation {
+    color: var(--nav_color);
+    font-size: 1.6vw;
+    cursor: pointer;
+}
+
+nav .Search_profile #notifcation:hover {
+    color: #fff;
+}
+
+nav .Search_profile .profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.Search_profile .profile img {
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+
+/* Music_Body section */
+.Music_Body {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.Music_Body main {
+    width: 70%;
+
+}
+
+
+
+.Music_Body main .Albums {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 400px;
+    background-color: #021946;
+
+}
+
+main .Albums .AlbumImage {
+    width: 60%;
+    height: 100%;
+    background-image: linear-gradient(transparent, #021946), url('https://media.gettyimages.com/id/1317493984/photo/the-brit-awards-2021-show.jpg?s=2048x2048&w=gi&k=20&c=65Vtv9ZZoNtYq-6nO3ui8-y8v0YNR2OUBc4WKnhsUQU=');
+    background-size: cover;
+    z-index: 1;
+}
+
+
+
+.Albums .AlbumDetails {
+    width: fit-content;
+    height: 100%;
+    margin-top: 80px;
+    padding: 10px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.AlbumDetails .heading_follower {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fontFamily-Albums);
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+.AlbumDetails .heading_follower p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    color: rgb(124, 124, 124);
+    font-weight: 600;
+}
+
+.add,
+.heart {
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.add:hover,
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.AlbumDetails h3 {
+    font-weight: lighter;
+    font-size: .9rem;
+    margin: 3px 0px;
+    letter-spacing: 1px;
+    color: rgb(124, 124, 124);
+    font-family: var(--fontFamily-Albums);
+    font-weight: 500;
+}
+
+.AlbumDetails p {
+    margin-top: 12px;
+    font-family: var(--fontFamily-Albums);
+    line-height: 23px;
+    font-size: .9rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+}
+
+.AlbumDetails .AlbumButton {
+    display: flex;
+    align-items: center;
+    margin-top: 8%;
+    margin-bottom: 10px;
+}
+
+.AlbumDetails .AlbumButton a {
+    position: relative;
+    padding: 10px 55px;
+    border: 2px solid rebeccapurple;
+    background-image: linear-gradient(90deg, rgb(79, 79, 232), rgb(174, 0, 255) 50%);
+    color: #fff;
+    font-family: var(--fontFamily-Albums);
+    letter-spacing: 1px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.AlbumButton a::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgb(174, 0, 255) 50%, rgb(79, 79, 232));
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.AlbumButton a:hover::before {
+    opacity: 1;
+}
+
+.AlbumDetails #Tracks {
+    font-family: var(--fontFamily-Albums);
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+/* Musics */
+.Musics {
+    margin-top: 20px;
+
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: rgba(75, 75, 75, 0.3);
+    transition: 0.4s;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.song:hover {
+    background-color: rgba(75, 75, 75, 0.5);
+}
+
+.Musics .songImage {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+}
+
+.songImage .ImageMusic {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 8px 14px;
+}
+
+.song span {
+    font-size: .8rem;
+    color: rgb(134, 134, 134);
+    font-weight: 600;
+    font-family: var(--fontFamily-Albums);
+}
+
+.song .songFeatures {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 8%;
+    font-size: 1.3rem;
+    margin-right: 30px;
+    color: #fff;
+}
+
+
+
+/* simillar artists song section*/
+
+.Music_Body .additionFeatures {
+    width: 30%;
+    height: fit-content;
+
+
+}
+
+.additionFeatures h1 {
+    font-family: var(--fontFamily-Albums);
+    font-size: 1.3rem;
+}
+
+.Music_Body .additionBox {
+    padding: 5px 15px;
+}
+
+.featuresHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additionFeatures .featuresHead span {
+    font-size: .7rem;
+    font-family: var(--fontFamily-Albums);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.featuresHead span:hover {
+    background-color: rgba(75, 75, 75, 0.5);
+
+}
+
+.featuresSong {
+    padding-top: 18px;
+}
+
+.featuresSong .featuresBoxsong {
+    padding: 4px 10px;
+    background-color: transparent;
+
+}
+
+.featuresBoxsong:hover {
+    background-color: rgba(75, 75, 75, 0.5);
+    ;
+}
+
+.additionFeatures .songDetail {
+    display: flex;
+    justify-content: space-between;
+
+    width: 45%;
+}
+
+.additionFeatures .similarImage {
+    width: 50px;
+    height: 50px;
+}
+
+/*RecentPlay div in additionFeatures*/
+.additionFeatures .RecentPlay {
+    padding-top: 30px;
+}
+
+.RecentImage {
+    width: 40px;
+    height: 40px;
+}
+
+/* musicPlayer */
+.musicPlayer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    padding: 0px 30px;
+    background-color: rgb(44, 43, 43);
+    z-index: 1000;
+}
+
+.musicPlayer .musicPlayerImage {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/*media query max-width:1000px
+*/
+@media screen and (max-width:1000px) {
+    .Music_Body .additionFeatures {
+        display: none;
+    }
+
+    .Music_Body main {
+        width: 100%;
+    }
+
+    header nav .logo {
+        width: 200px;
+    }
+
+    nav .Search_profile #notifcation {
+        font-size: 1.5rem;
+        margin: 0px 6px;
+    }
+}
+
+/*media query max-width:1000px */
+@media screen and (max-width:700px) {
+    .logo a {
+        display: none;
+    }
+
+    .Search_profile .searchBox {
+        color: #fff;
+
+    }
+
+    .Search_profile .searchBox {
+        display: none;
+    }
+
+    nav .Search_profile .profile {
+        width: 35px;
+        height: 35px;
+    }
+
+    .Music_Body main .Albums {
+        position: relative;
+        display: block;
+        height: 500px;
+
+    }
+
+    main .Albums .AlbumImage {
+        width: 100%;
+    }
+
+    main .Albums .AlbumDetails {
+        position: absolute;
+        bottom: 0px;
+        height: fit-content;
+        background-color: rgba(18, 3, 91, 0.5);
+
+    }
+
+    .AlbumDetails .heading_follower p,
+    .AlbumDetails h3 {
+        color: #fff;
+        font-size: .6rem;
+    }
+
+    .AlbumDetails .heading_follower,
+    .AlbumDetails p {
+        font-size: .7rem;
+    }
+
+    .song .songFeatures {
+        width: 50px;
+    }
+
+    .add,
+    .heart {
+        font-size: .9rem;
+    }
+}
